@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/krialex/joker#readme",
   "devDependencies": {
+    "eslint": "^9.4.0",
     "prettier": "^3.3.2"
   },
   "dependencies": {
