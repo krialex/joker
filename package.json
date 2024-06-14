@@ -1,14 +1,15 @@
 {
   "name": "joker",
-  "version": "0.2.0",
+  "version": "0.2.2",
   "description": "Application that tells jokes",
   "type": "module",
   "main": "src/index.js",
   "scripts": {
     "test": "node src/js/joker.test.js",
-    "format": "prettier -w src/**/*.js",
-    "lint": "eslint src/**/*.js",
-    "lint-fix": "eslint src/**/*.js --cache --fix"
+    "format": "prettier -w src/**/*/*.js",
+    "lint": "eslint src/**/*/*.js",
+    "lint-fix": "eslint src/**/*/*.js --cache --fix",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -31,5 +32,17 @@
   },
   "dependencies": {
     "give-me-a-joke": "^0.5.1"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --cache --fix",
+      "prettier --write"
+    ],
+    "*.html": [
+      "prettier --write"
+    ],
+    "*.scss": [
+      "prettier --write"
+    ]
   }
 }
